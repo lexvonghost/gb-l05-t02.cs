@@ -15,3 +15,14 @@ int[] NewArray(int[] array)
 int[] array = new int[length];
 array = NewArray(array);
 Console.WriteLine("[" + string.Join(", ", array) + "]");
+int Sum(int[] array)
+{
+    int sum = 0;
+    for (int i = 1; i < length; i = i + 2)
+    {
+        if (i < length)
+        sum = sum + array[i];
+    }
+    return sum;
+}
+Console.WriteLine("суммa элементов, стоящих на нечётных позициях:" + Sum(array));
